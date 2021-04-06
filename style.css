@@ -2,42 +2,144 @@
     width: 100px;
     height: 100px;
     border: 1px solid red;
+    background-color: none;
+    transition:  2s;
 }
+
+.ex-1-square:hover{
+    background-color: red;
+}
+
+
 .ex-2-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 2s;
 }
+
+.ex-2-square:active{
+    width: 100%;
+}
+
 .ex-3-square {
     width: 100px;
     height: 100px;
     background: red;
+    border-radius: none;
+    transition:  2s;
 }
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+
+
 .ex-4-square {
     width: 100px;
     height: 100px;
     background: red;
+    transition: 2s;
 }
+
+.ex-4-square:hover{
+   opacity: 0;
+}
+
+
 .ex-5-square {
     margin: 20px;
     width: 60px;
     height: 60px;
     background: red;
+    transition: 2s;
 }
+
+.ex-5-square:hover{
+    transform: scale(2);
+}
+
+.ex-5-square:active{
+    transform: scale(0.5);
+}
+
+
+
+
+
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+}
+
+.ex-6-img:hover{
+    filter: grayscale(100%) ;
+}
+
+.ex-7-img{
+    transition: 2s;
+}
+
+.ex-7-img:hover{
+    filter: blur(2px) contrast(50%);
+    
+}
+
+.ex-8-img{
+    transition: 2s;
+}
+
+.ex-8-img:hover{
+    filter: brightness(50%) grayscale(100%);
+    border-radius: 20px;
+    
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 2s;
 }
+
+.ex-9-img:hover{
+    filter: brightness(50%) grayscale(100%);
+    border-radius: 20px;
+    transform: scale(1.4);
+
+    
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation-name: gira;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gira{
+    0%{
+        transform: rotate(360deg);
+    }
 }
 .ex-11-icon {
     font-size: 60px;
+    
 }
+.ex-11-icon:hover{
+    animation-name: giradiverso;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes giradiverso{
+    0%{
+        transform: rotate(0);
+    }
+
+    75%{
+        transform: rotate(300deg);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -50,6 +152,7 @@
     line-height: 70px;
     text-align: center;
     text-decoration: none;
+
 }
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
@@ -66,4 +169,143 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: btnup12;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes btnup12 {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: btndown12;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes btndown12 {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: 50%;
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: btnup13;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes btnup13 {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+    130% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    145% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    175% {
+        left: 0;
+        top: 100%;
+    }
+    190% {
+        left: -15px;
+        top: -10px;
+    }
+    200% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: btndown13;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@keyframes btndown13 {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+    
+    130% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    145% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    175% {
+        right: 0;
+        bottom: 100%;
+    }
+    190% {
+        right: -15px;
+        bottom: -10px;
+    }
+    200% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
